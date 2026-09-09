@@ -7,8 +7,8 @@
     
     <!-- SEO Meta Tags -->
     <meta name="title" content="Projects & Architecture Case Studies | Sakhawat Hossain">
-    <meta name="description" content="Explore production backend projects, modular architectures, AWS deployments, and real-time systems engineered by Sakhawat Hossain (MyBergo, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences).">
-    <meta name="keywords" content="Laravel Projects, Backend Architecture, AWS Case Studies, MyBergo, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences, Next.js Fullstack, WebSockets, Sakhawat Hossain">
+    <meta name="description" content="Explore production backend projects, modular architectures, AWS deployments, and real-time systems engineered by Sakhawat Hossain (MyBergo, Auction Retriever, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences).">
+    <meta name="keywords" content="Laravel Projects, Backend Architecture, Scraping Engine, AWS Case Studies, MyBergo, Auction Retriever, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences, Next.js Fullstack, WebSockets, Sakhawat Hossain">
     <meta name="author" content="Sakhawat Hossain">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sajusun.github.io/portfolio/projects.html">
@@ -282,7 +282,109 @@
                     </div>
                 </div>
 
-                <!-- Project 2: CruzeHub -->
+                <!-- Project 2: Auction Retriever -->
+                <div id="auctionretriever" class="project-card glass-panel p-6 sm:p-10 border border-white/10" data-category="laravel aws realtime">
+                    <div class="grid lg:grid-cols-12 gap-8 items-start">
+                        
+                        <div class="lg:col-span-8 space-y-6">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <span class="tech-badge tech-badge-amber">
+                                    <i class="fas fa-circle text-amber-400 text-[8px]"></i> USA Production Live
+                                </span>
+                                <span class="text-xs font-mono text-gray-400">Real Estate Intelligence & Scraping</span>
+                                <span class="text-xs font-mono text-amber-400">Laravel 11 & GraphQL</span>
+                            </div>
+
+                            <div>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Auction Retriever — Real Estate & Land Auction Aggregation & Scraping Engine</h2>
+                                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                                    Architected the complete automated data extraction pipeline, GraphQL API engine, and subscription monetization backend for Auction Retriever (<a href="https://auctionretriever.com" target="_blank" class="text-amber-400 underline hover:text-amber-300">auctionretriever.com</a>). The platform crawls and aggregates thousands of foreclosed, tax deed, land, and bank-owned real estate auction listings from across the United States (Bid4Assets, RealtyBid, county boards), unifying them into a high-speed searchable investor dashboard with automated weekly digests.
+                                </p>
+                            </div>
+
+                            <!-- Architecture & Problem Solving Breakdown -->
+                            <div class="space-y-4 pt-2">
+                                <h3 class="text-sm font-mono uppercase tracking-wider text-amber-400">Engineering Highlights & Scraping Automation:</h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-spider text-amber-400"></i> Multi-Source Scraping & Extraction Pipeline
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Built robust crawler engines leveraging Symfony DomCrawler, CssSelector, and Guzzle with user-agent rotation, error-isolated queue workers (<code class="text-amber-300 text-[11px]">ScrapeBid4AssetsJob</code>, <code class="text-amber-300 text-[11px]">ScrapeRealtybidJob</code>), and automated duplicate detection.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-project-diagram text-cyan-400"></i> High-Speed GraphQL API (Lighthouse)
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Engineered schema-first GraphQL endpoints with Nuwave Lighthouse and GraphiQL playground, allowing instant multi-criteria filtration across US states, counties, asset categories, starting bids, and auction dates.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-credit-card text-emerald-400"></i> Stripe Cashier Pro Tier & 7-Day Trials
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Constructed recurring SaaS subscription workflows via Stripe Cashier managing 7-day free trials, automated billing cycles, subscription access gating, and idempotent webhook listeners.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-cubes text-indigo-400"></i> Modular Architecture & Weekly Digests
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Decoupled domains using <code class="text-indigo-300 text-[11px]">nwidart/laravel-modules</code> and developed automated cron workers delivering personalized weekly auction digests and real-time WebSocket alerts via Laravel Reverb.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tech Badges -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="tech-badge tech-badge-amber">Laravel 11</span>
+                                <span class="tech-badge tech-badge-amber">Scraping Engine (DomCrawler)</span>
+                                <span class="tech-badge tech-badge-amber">GraphQL (Lighthouse)</span>
+                                <span class="tech-badge tech-badge-amber">Laravel Reverb</span>
+                                <span class="tech-badge tech-badge-amber">Stripe Cashier</span>
+                                <span class="tech-badge tech-badge-amber">AWS S3</span>
+                                <span class="tech-badge tech-badge-amber">Redis Caching</span>
+                                <span class="tech-badge tech-badge-amber">Laravel Modules</span>
+                                <span class="tech-badge tech-badge-amber">Livewire 3</span>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar / Live Actions -->
+                        <div class="lg:col-span-4 glass-panel p-6 border border-white/10 space-y-6">
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Platform URL</span>
+                                <div class="mt-1">
+                                    <a href="https://auctionretriever.com" target="_blank" rel="noopener" class="text-base font-bold text-amber-400 hover:text-amber-300 flex items-center gap-2">
+                                        <i class="fas fa-globe"></i> auctionretriever.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Platform Capabilities</span>
+                                <ul class="text-xs text-gray-300 mt-2 space-y-2">
+                                    <li><strong class="text-white">1000+</strong> Auction Properties Tracked</li>
+                                    <li><strong class="text-white">Multi-Source</strong> Crawler Automation</li>
+                                    <li><strong class="text-white">GraphQL</strong> Multi-Criteria Filtration</li>
+                                    <li><strong class="text-white">Automated</strong> Weekly Investor Digests</li>
+                                </ul>
+                            </div>
+
+                            <a href="https://auctionretriever.com" target="_blank" rel="noopener" class="btn-primary w-full text-center text-sm py-2.5 !bg-amber-600 hover:!bg-amber-500">
+                                <i class="fas fa-external-link-alt"></i> Visit Live Platform
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 3: CruzeHub -->
                 <div id="cruzehub" class="project-card glass-panel p-6 sm:p-10 border border-white/10" data-category="laravel realtime aws">
                     <div class="grid lg:grid-cols-12 gap-8 items-start">
                         

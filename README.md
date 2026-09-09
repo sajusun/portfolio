@@ -9,7 +9,7 @@ Hosted on **GitHub Pages**: [https://sajusun.github.io/portfolio/](https://sajus
 ## 🚀 Live Pages & Architecture
 
 - **Home Page (`index.html`)**: Interactive Hero section, terminal telemetry, categorized tech stack, live production highlights, and work history.
-- **Projects & Case Studies (`projects.html`)**: Deep architectural breakdowns of enterprise projects (MyBergo, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences) with filterable categories.
+- **Projects & Case Studies (`projects.html`)**: Deep architectural breakdowns of enterprise projects (MyBergo, Auction Retriever, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences) with filterable categories.
 - **ATS Resume / CV (`resume.html`)**: Dedicated print-ready, ATS-scannable web resume with **1-click PDF download** linking directly to the verified resume.
 - **Contact Page (`contact.html`)**: Direct communication channels (Email, WhatsApp, Phone, LinkedIn, GitHub) and pre-routed messaging.
 - **Search Engine Optimization**: `sitemap.xml`, `robots.txt`, OpenGraph social cards, and Schema.org JSON-LD structured data.
