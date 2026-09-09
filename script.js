@@ -38,16 +38,62 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
 
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    const menuIcon = mobileMenuBtn.querySelector('i');
+
+    function toggleMenu(show) {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      const shouldOpen = typeof show === 'boolean' ? show : isHidden;
+
+      if (shouldOpen) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        if (menuIcon) {
+          menuIcon.className = 'fas fa-times text-lg';
+        }
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) {
+          menuIcon.className = 'fas fa-bars text-lg';
+        }
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
     });
 
     // Close mobile menu on link click
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+        toggleMenu(false);
       });
+    });
+
+    // Close when clicking outside header
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.classList.contains('hidden')) {
+        const header = document.querySelector('header');
+        if (header && !header.contains(e.target)) {
+          toggleMenu(false);
+        }
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        toggleMenu(false);
+      }
+    });
+
+    // Auto-close on resize to desktop (>= 768px)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+        toggleMenu(false);
+      }
     });
   }
 

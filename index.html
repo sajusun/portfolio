@@ -72,16 +72,16 @@
 <body class="selection:bg-indigo-500 selection:text-white">
 
     <!-- Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-nav py-3">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group">
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between py-3">
+            <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group">
                 <div class="brand-emblem">
                     <span>&lt;S/&gt;</span>
                 </div>
                 <div class="flex flex-col">
                     <span class="brand-title">Sakhawat <span class="text-gradient">Hossain</span></span>
                     <span class="brand-subtitle">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         Backend &amp; AWS Engineer
                     </span>
                 </div>
@@ -90,48 +90,48 @@
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-1">
                 <a href="index.html" class="nav-link active">Home</a>
-                <a href="projects.html" class="nav-link">Projects & Case Studies</a>
+                <a href="projects.html" class="nav-link">Projects &amp; Case Studies</a>
                 <a href="resume.html" class="nav-link">Resume / CV</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
             <!-- Actions -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="resume.html" class="btn-primary text-sm py-2.5 px-4.5">
+                <a href="resume.html" class="btn-primary text-sm py-2 px-4">
                     <i class="fas fa-file-pdf"></i> View Resume
                 </a>
-                <button class="theme-toggle-btn p-2.5 rounded-lg border border-white/10 hover:bg-white/5 transition-colors" aria-label="Toggle Theme">
+                <button class="theme-toggle-btn p-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors" aria-label="Toggle Theme">
                     <i class="fas fa-sun text-yellow-400"></i>
                 </button>
             </div>
 
             <!-- Mobile menu button -->
             <div class="flex items-center gap-2 md:hidden">
-                <button class="theme-toggle-btn p-2 rounded-lg border border-white/10" aria-label="Toggle Theme">
+                <button class="theme-toggle-btn p-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors" aria-label="Toggle Theme">
                     <i class="fas fa-sun text-yellow-400"></i>
                 </button>
-                <button id="mobile-menu-btn" class="p-2 rounded-lg border border-white/10 text-gray-300" aria-label="Menu">
-                    <i class="fas fa-bars text-xl"></i>
+                <button id="mobile-menu-btn" class="p-2 rounded-lg border border-white/10 text-gray-300 hover:text-white transition-colors" aria-label="Menu">
+                    <i class="fas fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-white/10 px-4 pt-2 pb-4 space-y-2">
-            <a href="index.html" class="block py-2 text-indigo-400 font-medium">Home</a>
-            <a href="projects.html" class="block py-2 text-gray-300 hover:text-white">Projects & Case Studies</a>
-            <a href="resume.html" class="block py-2 text-gray-300 hover:text-white">Resume / CV</a>
-            <a href="contact.html" class="block py-2 text-gray-300 hover:text-white">Contact</a>
-            <div class="pt-2">
-                <a href="resume.html" class="btn-primary w-full text-center text-sm py-2">
-                    <i class="fas fa-file-pdf mr-1"></i> View Resume
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 pt-3 pb-5 space-y-1">
+            <a href="index.html" class="mobile-nav-link active"><i class="fas fa-home w-5 text-center text-indigo-400"></i> Home</a>
+            <a href="projects.html" class="mobile-nav-link"><i class="fas fa-layer-group w-5 text-center text-indigo-400"></i> Projects &amp; Case Studies</a>
+            <a href="resume.html" class="mobile-nav-link"><i class="fas fa-file-lines w-5 text-center text-indigo-400"></i> Resume / CV</a>
+            <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope w-5 text-center text-indigo-400"></i> Contact</a>
+            <div class="pt-3">
+                <a href="resume.html" class="btn-primary w-full text-center text-sm py-2.5 flex items-center justify-center gap-2">
+                    <i class="fas fa-file-pdf"></i> View Resume
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow pt-28">
+    <main class="flex-grow pt-20 sm:pt-24 md:pt-28">
         
         <!-- Hero Section -->
         <section class="relative py-16 md:py-24 overflow-hidden">
@@ -147,32 +147,32 @@
                             </span>
                         </div>
 
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                            Architecting <span class="text-gradient">High-Scale Backend Systems</span> & Cloud Infrastructure.
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Architecting <span class="text-gradient">High-Scale Backend Systems</span> &amp; Cloud Infrastructure.
                         </h1>
 
-                        <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
                             Hi, I'm <strong class="text-white">Sakhawat Hossain</strong>. Backend Software Engineer specializing in <span class="text-indigo-400 font-medium">PHP 8+, Laravel 10/11/12, AWS Cloud</span>, and modular service-based architectures. Experienced in engineering international production web applications, real-time WebSocket pipelines, and query-optimized database engines.
                         </p>
 
                         <!-- Highlights Grid -->
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-                            <div class="glass-panel p-3.5 text-left">
-                                <div class="text-2xl font-bold font-mono text-indigo-400">30%+</div>
-                                <div class="text-xs text-gray-400">Query & Backend Latency Optimization</div>
+                            <div class="glass-panel p-3 sm:p-3.5 text-left">
+                                <div class="text-xl sm:text-2xl font-bold font-mono text-indigo-400">30%+</div>
+                                <div class="text-[11px] sm:text-xs text-gray-400">Query &amp; Backend Latency Optimization</div>
                             </div>
-                            <div class="glass-panel p-3.5 text-left">
-                                <div class="text-2xl font-bold font-mono text-cyan-400">AWS</div>
-                                <div class="text-xs text-gray-400">EC2, RDS, S3, ALB, SES & OIDC Deployment</div>
+                            <div class="glass-panel p-3 sm:p-3.5 text-left">
+                                <div class="text-xl sm:text-2xl font-bold font-mono text-cyan-400">AWS</div>
+                                <div class="text-[11px] sm:text-xs text-gray-400">EC2, RDS, S3, ALB, SES &amp; OIDC Deployment</div>
                             </div>
-                            <div class="glass-panel p-3.5 text-left col-span-2 sm:col-span-1">
-                                <div class="text-2xl font-bold font-mono text-emerald-400">Enterprise</div>
-                                <div class="text-xs text-gray-400">Multi-Vendor, Real-Time & D2C Systems</div>
+                            <div class="glass-panel p-3 sm:p-3.5 text-left col-span-2 sm:col-span-1">
+                                <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400">Enterprise</div>
+                                <div class="text-[11px] sm:text-xs text-gray-400">Multi-Vendor, Real-Time &amp; D2C Systems</div>
                             </div>
                         </div>
 
                         <!-- CTA Buttons -->
-                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+                        <div class="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start pt-4">
                             <a href="projects.html" class="btn-primary">
                                 <i class="fas fa-layer-group"></i> Explore Production Projects
                             </a>
@@ -185,12 +185,12 @@
                         </div>
 
                         <!-- Social Proof & Fast Contacts -->
-                        <div class="pt-4 flex items-center gap-6 justify-center lg:justify-start text-gray-400 text-sm">
+                        <div class="pt-4 flex flex-wrap items-center gap-4 sm:gap-6 justify-center lg:justify-start text-gray-400 text-xs sm:text-sm">
                             <a href="https://github.com/sajusun" target="_blank" rel="noopener" class="hover:text-white flex items-center gap-2 transition-colors">
-                                <i class="fab fa-github text-lg text-white"></i> github.com/sajusun
+                                <i class="fab fa-github text-base sm:text-lg text-white"></i> github.com/sajusun
                             </a>
                             <a href="https://linkedin.com/in/sajusun" target="_blank" rel="noopener" class="hover:text-cyan-400 flex items-center gap-2 transition-colors">
-                                <i class="fab fa-linkedin text-lg text-blue-400"></i> in/sajusun
+                                <i class="fab fa-linkedin text-base sm:text-lg text-blue-400"></i> in/sajusun
                             </a>
                             <span class="hidden sm:inline text-gray-600">|</span>
                             <span class="hidden sm:inline flex items-center gap-1 text-gray-400">
@@ -201,7 +201,7 @@
 
                     <!-- Hero Visual / Terminal Card -->
                     <div class="lg:col-span-5">
-                        <div class="glass-panel terminal-card p-6 border border-white/10 shadow-2xl relative overflow-hidden">
+                        <div class="glass-panel terminal-card p-4 sm:p-6 border border-white/10 shadow-2xl relative overflow-x-auto">
                             <!-- Mac Terminal Dots -->
                             <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
                                 <div class="flex items-center gap-2">
@@ -917,7 +917,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="glass-nav border-t border-white/10 py-8 text-sm">
+    <footer class="glass-footer py-8 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
                 <p class="text-gray-400">&copy; 2026 <strong class="text-white">Sakhawat Hossain</strong>. All rights reserved.</p>
