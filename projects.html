@@ -141,24 +141,24 @@
                                 <span class="tech-badge tech-badge-emerald">
                                     <i class="fas fa-circle text-emerald-400 text-[8px]"></i> Production Live
                                 </span>
-                                <span class="text-xs font-mono text-gray-400">Hotel Management & Booking SaaS</span>
+                                <span class="text-xs font-mono text-gray-400">Hotel Management &amp; Booking SaaS</span>
                                 <span class="text-xs font-mono text-indigo-400">Multi-Portal Enterprise Architecture</span>
                             </div>
 
                             <div>
-                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">MyBergo — Multi-Vendor Hotel & Property Booking Service Platform</h2>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">MyBergo — Multi-Vendor Hotel &amp; Property Booking Service Platform</h2>
                                 <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                    Architected an enterprise-scale Booking.com-style multi-tenant accommodation ecosystem operating across three dedicated portals: the guest-facing booking engine (<a href="https://mybergo.com" target="_blank" class="text-indigo-400 underline hover:text-indigo-300">mybergo.com</a>), the property host operations hub (<span class="text-gray-200 font-mono text-xs">hotel-owner.mybergo.com</span>), and the central governance dashboard (<span class="text-gray-200 font-mono text-xs">admin.mybergo.com</span>). Built for high availability, zero-downtime CI/CD, and sub-second booking transaction speed.
+                                    Architected an enterprise-scale Booking.com-style multi-tenant accommodation ecosystem operating across three dedicated portals: the guest-facing booking engine (<a href="https://mybergo.com" target="_blank" class="text-indigo-400 underline hover:text-indigo-300 font-semibold">mybergo.com</a>), a dedicated Property Host Operations Hub for hotel owners to manage rooms &amp; pricing, and a Central Governance Dashboard for super admins. Built for high availability, zero-downtime CI/CD, and sub-second booking transaction speed.
                                 </p>
                             </div>
 
                             <!-- Architecture & Problem Solving Breakdown -->
                             <div class="space-y-4 pt-2">
-                                <h3 class="text-sm font-mono uppercase tracking-wider text-indigo-400">Engineering Highlights & Enterprise AWS Architecture:</h3>
+                                <h3 class="text-sm font-mono uppercase tracking-wider text-indigo-400">Engineering Highlights &amp; Enterprise AWS Architecture:</h3>
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-server text-amber-400"></i> AWS EC2, ALB & Aurora RDS Cluster
+                                            <i class="fas fa-server text-amber-400"></i> AWS EC2, ALB &amp; Aurora RDS Cluster
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Architected high-availability cloud infrastructure utilizing AWS EC2 compute instances behind an Application Load Balancer (ALB) connected to an Amazon Aurora RDS (MySQL-compatible) relational cluster for automatic replication and failover.
@@ -166,7 +166,7 @@
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-cloud-upload-alt text-cyan-400"></i> S3 Presigned Uploads & CDN Caching
+                                            <i class="fas fa-cloud-upload-alt text-cyan-400"></i> S3 Presigned Uploads &amp; CDN Caching
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Engineered direct-to-S3 presigned URL uploads with time-limited authorization, automated 1-year immutable cache control headers (<code class="text-indigo-300 text-[11px]">max-age=31536000</code>), and secure expiring temporary view URLs.
@@ -182,7 +182,7 @@
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-key text-rose-400"></i> GitHub Actions OIDC & AWS SSM CI/CD
+                                            <i class="fas fa-key text-rose-400"></i> GitHub Actions OIDC &amp; AWS SSM CI/CD
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Constructed a zero-secret passwordless CI/CD pipeline using GitHub Actions OIDC to assume AWS IAM roles, deploying atomic releases securely to target live servers via AWS Systems Manager (SSM) Run Command.
@@ -198,7 +198,7 @@
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-envelope text-indigo-400"></i> Amazon SES & Transactional Delivery
+                                            <i class="fas fa-envelope text-indigo-400"></i> Amazon SES &amp; Transactional Delivery
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Configured Amazon SES (Simple Email Service) for transactional guest reservation receipts, PDF booking vouchers (Barryvdh DomPDF), host notifications, and DKIM/SPF verified deliverability.
@@ -206,7 +206,7 @@
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-lock text-indigo-400"></i> Double-Booking Prevention & Concurrency
+                                            <i class="fas fa-lock text-indigo-400"></i> Double-Booking Prevention &amp; Concurrency
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Engineered pessimistic database row locking and Redis-backed temporary session holds to eliminate race conditions when multiple users attempt simultaneous booking on identical dates.
@@ -214,7 +214,7 @@
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-credit-card text-emerald-400"></i> Multi-Gateway Payments & Payout Ledger
+                                            <i class="fas fa-credit-card text-emerald-400"></i> Multi-Gateway Payments &amp; Payout Ledger
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Integrated Stripe Cashier and Chapa payment gateways with currency conversion APIs, automated refund sync command cron jobs, and double-entry commission payout ledgers for property hosts.
@@ -228,7 +228,7 @@
                                 <span class="tech-badge">Laravel 12</span>
                                 <span class="tech-badge">PHP 8.4</span>
                                 <span class="tech-badge">Amazon Aurora RDS</span>
-                                <span class="tech-badge">AWS EC2 & ALB</span>
+                                <span class="tech-badge">AWS EC2 &amp; ALB</span>
                                 <span class="tech-badge">AWS S3 Presigned URLs</span>
                                 <span class="tech-badge">AWS SSM OIDC CI/CD</span>
                                 <span class="tech-badge">Amazon SES</span>
@@ -244,20 +244,24 @@
                         <div class="lg:col-span-4 glass-panel p-4 sm:p-6 border border-white/10 space-y-4 sm:space-y-6">
                             <div>
                                 <span class="text-xs font-mono uppercase text-gray-400">Platform Ecosystem</span>
-                                <div class="mt-2 space-y-2">
+                                <div class="mt-2.5 space-y-3">
                                     <div>
                                         <span class="text-[11px] text-gray-400 uppercase font-mono">Guest Booking Portal:</span>
-                                        <a href="https://mybergo.com" target="_blank" rel="noopener" class="text-sm font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+                                        <a href="https://mybergo.com" target="_blank" rel="noopener" class="text-sm font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 mt-0.5">
                                             <i class="fas fa-globe"></i> mybergo.com
                                         </a>
                                     </div>
                                     <div>
                                         <span class="text-[11px] text-gray-400 uppercase font-mono">Hotel Owner Portal:</span>
-                                        <div class="text-xs font-mono text-gray-300">hotel-owner.mybergo.com</div>
+                                        <div class="text-xs text-gray-300 font-medium mt-0.5 flex items-center gap-1.5">
+                                            <i class="fas fa-hotel text-indigo-400"></i> Property Host Operations Hub
+                                        </div>
                                     </div>
                                     <div>
                                         <span class="text-[11px] text-gray-400 uppercase font-mono">Super Admin Control:</span>
-                                        <div class="text-xs font-mono text-gray-300">admin.mybergo.com</div>
+                                        <div class="text-xs text-gray-300 font-medium mt-0.5 flex items-center gap-1.5">
+                                            <i class="fas fa-shield-alt text-cyan-400"></i> Central Governance &amp; Admin Suite
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -274,7 +278,7 @@
                             </div>
 
                             <a href="https://mybergo.com" target="_blank" rel="noopener" class="btn-primary w-full text-center text-sm py-2.5">
-                                <i class="fas fa-external-link-alt"></i> Visit Live Platform
+                                <i class="fas fa-external-link-alt"></i> Visit Live Booking Engine
                             </a>
                         </div>
 
@@ -290,24 +294,24 @@
                                 <span class="tech-badge tech-badge-amber">
                                     <i class="fas fa-circle text-amber-400 text-[8px]"></i> USA Production Live
                                 </span>
-                                <span class="text-xs font-mono text-gray-400">Real Estate Intelligence & Scraping</span>
-                                <span class="text-xs font-mono text-amber-400">Laravel 11 & GraphQL</span>
+                                <span class="text-xs font-mono text-gray-400">Real Estate Intelligence &amp; Scraping</span>
+                                <span class="text-xs font-mono text-amber-400">Laravel 11 &amp; GraphQL</span>
                             </div>
 
                             <div>
-                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Auction Retriever — Real Estate & Land Auction Aggregation & Scraping Engine</h2>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Auction Retriever — Real Estate &amp; Land Auction Aggregation &amp; Scraping Engine</h2>
                                 <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                    Architected the complete automated data extraction pipeline, GraphQL API engine, and subscription monetization backend for Auction Retriever (<a href="https://auctionretriever.com" target="_blank" class="text-amber-400 underline hover:text-amber-300">auctionretriever.com</a>). The platform crawls and aggregates thousands of foreclosed, tax deed, land, and bank-owned real estate auction listings from across the United States (Bid4Assets, RealtyBid, county boards), unifying them into a high-speed searchable investor dashboard with automated weekly digests.
+                                    Architected the complete automated data extraction pipeline, GraphQL API engine, and subscription monetization backend for Auction Retriever (<a href="https://auctionretriever.com" target="_blank" class="text-amber-400 underline hover:text-amber-300 font-semibold">auctionretriever.com</a>). The platform crawls and aggregates thousands of foreclosed, tax deed, land, and bank-owned real estate auction listings from across the United States (Bid4Assets, RealtyBid, county boards), unifying them into a high-speed searchable investor dashboard with automated weekly digests.
                                 </p>
                             </div>
 
                             <!-- Architecture & Problem Solving Breakdown -->
                             <div class="space-y-4 pt-2">
-                                <h3 class="text-sm font-mono uppercase tracking-wider text-amber-400">Engineering Highlights & Scraping Automation:</h3>
+                                <h3 class="text-sm font-mono uppercase tracking-wider text-amber-400">Engineering Highlights &amp; Scraping Automation:</h3>
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-spider text-amber-400"></i> Multi-Source Scraping & Extraction Pipeline
+                                            <i class="fas fa-spider text-amber-400"></i> Multi-Source Scraping &amp; Extraction Pipeline
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Built robust crawler engines leveraging Symfony DomCrawler, CssSelector, and Guzzle with user-agent rotation, error-isolated queue workers (<code class="text-amber-300 text-[11px]">ScrapeBid4AssetsJob</code>, <code class="text-amber-300 text-[11px]">ScrapeRealtybidJob</code>), and automated duplicate detection.
@@ -323,7 +327,7 @@
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-credit-card text-emerald-400"></i> Stripe Cashier Pro Tier & 7-Day Trials
+                                            <i class="fas fa-credit-card text-emerald-400"></i> Stripe Cashier Pro Tier &amp; 7-Day Trials
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Constructed recurring SaaS subscription workflows via Stripe Cashier managing 7-day free trials, automated billing cycles, subscription access gating, and idempotent webhook listeners.
@@ -331,7 +335,7 @@
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-cubes text-indigo-400"></i> Modular Architecture & Weekly Digests
+                                            <i class="fas fa-cubes text-indigo-400"></i> Modular Architecture &amp; Weekly Digests
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Decoupled domains using <code class="text-indigo-300 text-[11px]">nwidart/laravel-modules</code> and developed automated cron workers delivering personalized weekly auction digests and real-time WebSocket alerts via Laravel Reverb.
@@ -343,14 +347,15 @@
                             <!-- Tech Badges -->
                             <div class="flex flex-wrap gap-2 pt-2">
                                 <span class="tech-badge tech-badge-amber">Laravel 11</span>
-                                <span class="tech-badge tech-badge-amber">Scraping Engine (DomCrawler)</span>
+                                <span class="tech-badge tech-badge-amber">PHP 8.3</span>
+                                <span class="tech-badge tech-badge-amber">Symfony DomCrawler</span>
                                 <span class="tech-badge tech-badge-amber">GraphQL (Lighthouse)</span>
-                                <span class="tech-badge tech-badge-amber">Laravel Reverb</span>
                                 <span class="tech-badge tech-badge-amber">Stripe Cashier</span>
+                                <span class="tech-badge tech-badge-amber">Laravel Reverb</span>
                                 <span class="tech-badge tech-badge-amber">AWS S3</span>
-                                <span class="tech-badge tech-badge-amber">Redis Caching</span>
                                 <span class="tech-badge tech-badge-amber">Laravel Modules</span>
-                                <span class="tech-badge tech-badge-amber">Livewire 3</span>
+                                <span class="tech-badge tech-badge-amber">Guzzle HTTP</span>
+                                <span class="tech-badge tech-badge-amber">Redis Queues</span>
                             </div>
                         </div>
 
@@ -366,12 +371,12 @@
                             </div>
 
                             <div>
-                                <span class="text-xs font-mono uppercase text-gray-400">Platform Capabilities</span>
+                                <span class="text-xs font-mono uppercase text-gray-400">Monetization &amp; Scope</span>
                                 <ul class="text-xs text-gray-300 mt-2 space-y-2">
-                                    <li><strong class="text-white">1000+</strong> Auction Properties Tracked</li>
-                                    <li><strong class="text-white">Multi-Source</strong> Crawler Automation</li>
-                                    <li><strong class="text-white">GraphQL</strong> Multi-Criteria Filtration</li>
-                                    <li><strong class="text-white">Automated</strong> Weekly Investor Digests</li>
+                                    <li><strong class="text-white">Model:</strong> SaaS Subscription (Stripe Cashier)</li>
+                                    <li><strong class="text-white">Trials:</strong> 7-Day Free Trial Auto-Billing</li>
+                                    <li><strong class="text-white">Coverage:</strong> US 50 States (Foreclosures &amp; Tax Deeds)</li>
+                                    <li><strong class="text-white">Automation:</strong> Daily Cron Scrapers &amp; Digest Queues</li>
                                 </ul>
                             </div>
 
@@ -390,21 +395,21 @@
                         <div class="lg:col-span-8 space-y-6">
                             <div class="flex flex-wrap items-center gap-3">
                                 <span class="tech-badge tech-badge-cyan">
-                                    <i class="fas fa-circle text-cyan-400 text-[8px]"></i> Australia Live
+                                    <i class="fas fa-clock text-cyan-400 text-[8px]"></i> Mobile App • Private Client Staging
                                 </span>
-                                <span class="text-xs font-mono text-gray-400">Automotive Community & Marketplace</span>
+                                <span class="text-xs font-mono text-gray-400">Automotive Community &amp; Marketplace</span>
                             </div>
 
                             <div>
-                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">CruzeHub — Automotive Events & Parts Marketplace Suite</h2>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">CruzeHub — Automotive Events &amp; Parts Marketplace Suite</h2>
                                 <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                    Engineered the complete enterprise administration dashboard, backend APIs, and community engine for an Australian automotive enthusiast platform. The system connects vehicle owners with compatible aftermarket performance parts, tracks automotive cruises/events, and facilitates real-time member messaging.
+                                    Engineered the complete enterprise administration dashboard, RESTful backend APIs, and community engine for an Australian automotive enthusiast mobile application (currently in private client staging / app development). The system connects vehicle owners with compatible aftermarket performance parts, tracks automotive cruises/events, and facilitates real-time member messaging.
                                 </p>
                             </div>
 
                             <!-- Architecture & Problem Solving Breakdown -->
                             <div class="space-y-4 pt-2">
-                                <h3 class="text-sm font-mono uppercase tracking-wider text-cyan-400">Engineering Highlights & Solutions:</h3>
+                                <h3 class="text-sm font-mono uppercase tracking-wider text-cyan-400">Engineering Highlights &amp; Solutions:</h3>
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
@@ -419,7 +424,7 @@
                                             <i class="fas fa-comments text-indigo-400"></i> Live Socket Broadcasting
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
-                                            Configured Laravel Reverb & Echo WebSocket pipelines for real-time car meet RSVP broadcasts and direct peer-to-peer automotive chat.
+                                            Configured Laravel Reverb &amp; Echo WebSocket pipelines for real-time car meet RSVP broadcasts and direct peer-to-peer automotive chat.
                                         </p>
                                     </div>
                                 </div>
@@ -428,22 +433,28 @@
                             <!-- Tech Badges -->
                             <div class="flex flex-wrap gap-2 pt-2">
                                 <span class="tech-badge tech-badge-cyan">Laravel</span>
+                                <span class="tech-badge tech-badge-cyan">RESTful API</span>
                                 <span class="tech-badge tech-badge-cyan">Laravel Echo</span>
                                 <span class="tech-badge tech-badge-cyan">WebSockets</span>
                                 <span class="tech-badge tech-badge-cyan">MySQL Relational</span>
-                                <span class="tech-badge tech-badge-cyan">RESTful API</span>
+                                <span class="tech-badge tech-badge-cyan">RBAC Admin</span>
                             </div>
                         </div>
 
                         <!-- Sidebar / Live Actions -->
                         <div class="lg:col-span-4 glass-panel p-4 sm:p-6 border border-white/10 space-y-4 sm:space-y-6">
                             <div>
-                                <span class="text-xs font-mono uppercase text-gray-400">Platform URL</span>
-                                <div class="mt-1">
-                                    <a href="https://cruzehub.com.au" target="_blank" rel="noopener" class="text-base font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-2">
-                                        <i class="fas fa-globe"></i> cruzehub.com.au
-                                    </a>
+                                <span class="text-xs font-mono uppercase text-gray-400">Application Status</span>
+                                <div class="mt-1.5 flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                                    <span class="text-sm font-bold text-white">Private Client Staging</span>
                                 </div>
+                                <p class="text-xs text-gray-400 mt-1">Mobile application build in active development. Public URL will be released upon official app store launch.</p>
+                            </div>
+
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Architecture Scope</span>
+                                <p class="text-xs text-gray-300 mt-1">Mobile App REST API + Parts Compatibility DB + Real-Time Chat</p>
                             </div>
 
                             <div>
@@ -451,9 +462,9 @@
                                 <p class="text-xs text-gray-300 mt-1">Australia (Automotive Community)</p>
                             </div>
 
-                            <a href="https://cruzehub.com.au" target="_blank" rel="noopener" class="btn-primary w-full text-center text-sm py-2.5">
-                                <i class="fas fa-external-link-alt"></i> Visit Live Platform
-                            </a>
+                            <button disabled class="w-full py-2.5 px-4 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs sm:text-sm font-medium flex items-center justify-center gap-2 cursor-not-allowed opacity-80" title="Web version not public; Mobile app release pending">
+                                <i class="fas fa-lock text-cyan-400 text-xs"></i> Mobile App in Private Staging
+                            </button>
                         </div>
 
                     </div>
