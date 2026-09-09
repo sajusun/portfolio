@@ -46,15 +46,18 @@
 <body class="selection:bg-indigo-500 selection:text-white">
 
     <!-- Navbar (Hidden when printing) -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-nav no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                    SH
-                </span>
-                <div>
-                    <span class="font-bold text-lg tracking-tight block leading-none">Sakhawat <span class="text-indigo-400">Hossain</span></span>
-                    <span class="text-xs font-mono text-gray-400 leading-none">Backend Engineer</span>
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav py-3 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="brand-emblem">
+                    <span>&lt;S/&gt;</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="brand-title">Sakhawat <span class="text-gradient">Hossain</span></span>
+                    <span class="brand-subtitle">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Backend &amp; AWS Engineer
+                    </span>
                 </div>
             </a>
 
@@ -68,7 +71,7 @@
 
             <!-- Actions -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="assets/docs/Sakhawat_Hossain_Resume.pdf" download="SAKHAWAT_HOSSAIN_BACKEND_ENGINEER_CV.pdf" class="btn-primary text-sm py-2 px-4">
+                <a href="assets/docs/Sakhawat_Hossain_Resume.pdf" download="SAKHAWAT_HOSSAIN_BACKEND_ENGINEER_CV.pdf" class="btn-primary text-sm py-2.5 px-4.5">
                     <i class="fas fa-download"></i> Download PDF
                 </a>
                 <button class="theme-toggle-btn p-2.5 rounded-lg border border-white/10 hover:bg-white/5 transition-colors" aria-label="Toggle Theme">
@@ -102,7 +105,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow pt-24 pb-16">
+    <main class="flex-grow pt-28 pb-16">
         
         <!-- Header Bar with Quick Action Controls (no-print) -->
         <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-8 no-print">
