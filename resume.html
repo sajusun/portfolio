@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume / CV | Sakhawat Hossain - Backend Software Engineer (Laravel, PHP, AWS)</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="Resume / CV | Sakhawat Hossain - Backend Software Engineer">
+    <meta name="description" content="View and download the ATS-friendly resume of Sakhawat Hossain, Backend Software Engineer specializing in Laravel, PHP, AWS, RESTful APIs, MySQL, and WebSockets.">
+    <meta name="keywords" content="Sakhawat Hossain Resume, Backend Engineer CV, Laravel Developer Resume, PHP AWS CV, Software Engineer CV Dhaka">
+    <meta name="author" content="Sakhawat Hossain">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sajusun.github.io/portfolio/resume.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sajusun.github.io/portfolio/resume.html">
+    <meta property="og:title" content="Resume / CV | Sakhawat Hossain - Backend Software Engineer">
+    <meta property="og:description" content="Official ATS-friendly resume of Sakhawat Hossain with complete work history, AWS skills, and production project portfolio.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navbar (Hidden when printing) -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    SH
+                </span>
+                <div>
+                    <span class="font-bold text-lg tracking-tight block leading-none">Sakhawat <span class="text-indigo-400">Hossain</span></span>
+                    <span class="text-xs font-mono text-gray-400 leading-none">Backend Engineer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects & Case Studies</a>
+                <a href="resume.html" class="nav-link active">Resume / CV</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="assets/docs/Sakhawat_Hossain_Resume.pdf" download="SAKHAWAT_HOSSAIN_BACKEND_ENGINEER_CV.pdf" class="btn-primary text-sm py-2 px-4">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+                <button class="theme-toggle-btn p-2.5 rounded-lg border border-white/10 hover:bg-white/5 transition-colors" aria-label="Toggle Theme">
+                    <i class="fas fa-sun text-yellow-400"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="flex items-center gap-2 md:hidden">
+                <button class="theme-toggle-btn p-2 rounded-lg border border-white/10" aria-label="Toggle Theme">
+                    <i class="fas fa-sun text-yellow-400"></i>
+                </button>
+                <button id="mobile-menu-btn" class="p-2 rounded-lg border border-white/10 text-gray-300" aria-label="Menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-white/10 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="projects.html" class="block py-2 text-gray-300 hover:text-white">Projects & Case Studies</a>
+            <a href="resume.html" class="block py-2 text-indigo-400 font-medium">Resume / CV</a>
+            <a href="contact.html" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <div class="pt-2">
+                <a href="assets/docs/Sakhawat_Hossain_Resume.pdf" download="SAKHAWAT_HOSSAIN_BACKEND_ENGINEER_CV.pdf" class="btn-primary w-full text-center text-sm py-2">
+                    <i class="fas fa-download mr-1"></i> Download PDF
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-16">
+        
+        <!-- Header Bar with Quick Action Controls (no-print) -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-8 no-print">
+            <div class="glass-panel p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 border border-indigo-500/20 shadow-xl">
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fas fa-file-alt text-indigo-400"></i> Curriculum Vitae (CV)
+                    </h1>
+                    <p class="text-xs sm:text-sm text-gray-400">ATS-Optimized & Verified Profile | Updated 2026</p>
+                </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <a href="assets/docs/Sakhawat_Hossain_Resume.pdf" download="SAKHAWAT_HOSSAIN_BACKEND_ENGINEER_CV.pdf" class="btn-primary text-xs sm:text-sm flex-1 sm:flex-initial py-2.5 px-4 text-center">
+                        <i class="fas fa-file-download"></i> Download PDF
+                    </a>
+                    <button onclick="window.print()" class="btn-secondary text-xs sm:text-sm py-2.5 px-4" title="Print this resume">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                    <button onclick="window.copyToClipboard('https://sajusun.github.io/portfolio/resume.html', 'Resume Link copied!')" class="btn-secondary text-xs sm:text-sm py-2.5 px-3" title="Share link">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ATS Resume Document Container -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="resume-paper p-8 sm:p-12 text-[#111827] bg-white rounded-xl shadow-2xl border border-gray-200">
+                
+                <!-- Resume Header -->
+                <header class="text-center border-b-2 border-gray-900 pb-4 mb-6">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-wide text-gray-900 mb-1">
+                        SAKHAWAT HOSSAIN
+                    </h1>
+                    <div class="text-base sm:text-lg font-bold text-indigo-700 tracking-wide mb-2">
+                        Backend Software Engineer | Laravel, PHP & AWS
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 text-xs sm:text-sm text-gray-700 font-medium">
+                        <span><i class="fas fa-map-marker-alt text-gray-500 mr-1"></i> Dhaka, Bangladesh</span>
+                        <span>•</span>
+                        <a href="tel:+8801580349431" class="hover:text-indigo-600"><i class="fas fa-phone text-gray-500 mr-1"></i> +880 1580-349431</a>
+                        <span>•</span>
+                        <a href="mailto:backend.sakhawat@gmail.com" class="hover:text-indigo-600 font-semibold"><i class="fas fa-envelope text-gray-500 mr-1"></i> backend.sakhawat@gmail.com</a>
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 text-xs sm:text-sm text-gray-700 font-medium mt-1">
+                        <a href="https://linkedin.com/in/sajusun" target="_blank" class="hover:text-indigo-600 text-blue-700"><i class="fab fa-linkedin mr-1"></i> linkedin.com/in/sajusun</a>
+                        <span>•</span>
+                        <a href="https://github.com/sajusun" target="_blank" class="hover:text-indigo-600 text-gray-900"><i class="fab fa-github mr-1"></i> github.com/sajusun</a>
+                    </div>
+                </header>
+
+                <!-- Professional Summary -->
+                <section class="mb-6">
+                    <h2 class="text-sm font-extrabold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-2">
+                        PROFESSIONAL SUMMARY
+                    </h2>
+                    <p class="text-sm text-gray-800 leading-relaxed text-justify">
+                        Backend Software Engineer specializing in PHP and Laravel, with strong experience in designing modular, service-based backend architectures, scalable RESTful APIs, complex business logic, and database-driven applications. Experienced in building and maintaining production systems for international clients, with hands-on expertise in AWS infrastructure and deployment including EC2, S3, Aurora RDS, SES, SSM, OIDC, and Application Load Balancer. Also experienced in full-stack development with React, Next.js, and modern web technologies.
+                    </p>
+                </section>
+
+                <!-- Technical Skills -->
+                <section class="mb-6">
+                    <h2 class="text-sm font-extrabold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-2">
+                        TECHNICAL SKILLS
+                    </h2>
+                    <ul class="text-sm text-gray-800 space-y-1.5 list-disc pl-5">
+                        <li>
+                            <strong class="text-gray-900">Backend & Architecture:</strong> PHP 8+ (OOP), Laravel (v10/v11/v12), MVC, Modular Architecture, Service-Based Architecture, RESTful API Design & Versioning, SOLID Principles, Design Patterns
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Frontend & UI:</strong> JavaScript (ES6+), TypeScript, Next.js 15, React.js, Vue.js, Tailwind CSS, Blade, HTML5, CSS3, Responsive Design
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Real-Time & Caching:</strong> WebSockets, Laravel Reverb, Laravel Echo, Pusher, Redis Caching, Event Broadcasting, Queue Workers
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Databases & Optimization:</strong> MySQL, PostgreSQL, SQLite, Database Normalization, Indexing, Complex Query Optimization, Eloquent ORM
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Cloud & DevOps:</strong> AWS (EC2, S3, Aurora RDS, SES, SSM, OIDC, Application Load Balancer), Nginx, Linux CLI, CI/CD, Git/GitHub, Docker
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Security & Payments:</strong> Laravel Sanctum, JWT, OAuth2, RBAC, Stripe, SSLCommerz, bKash, Automated Webhooks
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Work Experience -->
+                <section class="mb-6">
+                    <h2 class="text-sm font-extrabold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-3">
+                        WORK EXPERIENCE
+                    </h2>
+
+                    <!-- Softvence IT Ltd -->
+                    <div class="mb-4">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                            <div>
+                                <span class="font-bold text-gray-900 text-sm sm:text-base">Laravel / Backend Developer</span>
+                                <span class="text-gray-600 font-normal"> | Softvence IT Ltd</span>
+                            </div>
+                            <div class="text-xs sm:text-sm font-bold text-gray-700">
+                                Dec 2025 – Present | Mohakhali, Dhaka, BD
+                            </div>
+                        </div>
+                        <ul class="text-sm text-gray-800 space-y-1 list-disc pl-5 mt-1.5">
+                            <li>Design and develop scalable Laravel backend systems using modular and service-based architecture, RESTful APIs, and reusable business logic.</li>
+                            <li>Develop production-ready web applications, administrative dashboards, CRM workflows, and multi-vendor business modules for international clients.</li>
+                            <li>Design and optimize database schemas, relationships, indexes, and complex Eloquent/SQL queries, improving backend processing performance by <strong>30%</strong>.</li>
+                            <li>Integrate third-party services, payment gateways, and webhook-based workflows with reliable error handling and retry mechanisms.</li>
+                            <li>Deploy and maintain production applications on AWS infrastructure, working with EC2, S3, Aurora RDS, SES, SSM, OIDC, and Application Load Balancer.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Edison Industries Ltd -->
+                    <div class="mb-4">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                            <div>
+                                <span class="font-bold text-gray-900 text-sm sm:text-base">Jr. Technical Assistant / Software Operations</span>
+                                <span class="text-gray-600 font-normal"> | Edison Industries Ltd</span>
+                            </div>
+                            <div class="text-xs sm:text-sm font-bold text-gray-700">
+                                Jan 2024 – Nov 2025 | Savar, Dhaka, BD
+                            </div>
+                        </div>
+                        <ul class="text-sm text-gray-800 space-y-1 list-disc pl-5 mt-1.5">
+                            <li>Provided technical troubleshooting and hardware-software system integration for production and engineering lines.</li>
+                            <li>Developed automated diagnostic scripts and data logging routines to streamline equipment testing workflows.</li>
+                            <li>Collaborated with cross-functional engineering teams to diagnose system bottlenecks and improve operational turnaround time by <strong>20%</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Kodeeo Ltd -->
+                    <div class="mb-3">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                            <div>
+                                <span class="font-bold text-gray-900 text-sm sm:text-base">App Developer (Intern / Trainee)</span>
+                                <span class="text-gray-600 font-normal"> | Kodeeo Ltd</span>
+                            </div>
+                            <div class="text-xs sm:text-sm font-bold text-gray-700">
+                                Sept 2023 – Nov 2023 | Uttara, Dhaka, BD
+                            </div>
+                        </div>
+                        <ul class="text-sm text-gray-800 space-y-1 list-disc pl-5 mt-1.5">
+                            <li>Designed and documented modular RESTful APIs consumed by mobile (Flutter) and web client applications.</li>
+                            <li>Engineered real-time notification pipelines and socket broadcasting using Laravel Reverb and Echo.</li>
+                            <li>Developed role-based multi-guard authentication modules using Laravel Sanctum.</li>
+                            <li>Collaborated with UI/UX designers to translate Figma prototypes into pixel-perfect, accessible web interfaces.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Live & Production Projects -->
+                <section class="mb-6">
+                    <h2 class="text-sm font-extrabold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-3">
+                        LIVE & PRODUCTION PROJECTS
+                    </h2>
+                    <ul class="text-sm text-gray-800 space-y-2 list-disc pl-5">
+                        <li>
+                            <strong class="text-gray-900">MyBergo - Multi-Vendor Hotel & Property Booking Engine</strong> (<a href="https://mybergo.com" target="_blank" class="text-indigo-600 underline">mybergo.com</a>) — Architected a Booking.com-style property management platform where hosts list hotels/accommodations and guests reserve in real time with date-availability locks, seasonal pricing, and host payout dashboards.
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">CruzeHub - Automotive Events, Parts Marketplace & Admin Suite</strong> (<a href="https://cruzehub.com.au" target="_blank" class="text-indigo-600 underline">cruzehub.com.au</a>) — Engineered the complete enterprise admin dashboard for an Australian automotive community app with vehicle compatibility matching (connecting cars with compatible aftermarket parts) and live socket chat.
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">Organ Sciences - D2C Organic Supplement Subscription Portal</strong> (<a href="https://organ-sciences.vercel.app" target="_blank" class="text-indigo-600 underline">organ-sciences.vercel.app</a>) — Developed recurring subscription e-commerce portal with Next.js & Laravel, implementing automated recurring billing, subscriber customer portals, and Stripe subscription webhook listeners.
+                        </li>
+                        <li>
+                            <strong class="text-gray-900">CodeStudio Enterprise Workspace</strong> (<a href="https://github.com/sajusun/code-studio" target="_blank" class="text-indigo-600 underline">github.com/sajusun/code-studio</a>) — Created a multi-service showcase platform with private client tracking workspace, live milestone progress, and WebSocket chat.
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Education -->
+                <section>
+                    <h2 class="text-sm font-extrabold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-2">
+                        EDUCATION
+                    </h2>
+                    <div class="text-sm text-gray-800 space-y-1">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <strong class="text-gray-900">Diploma in Computer Science & Technology</strong> | Dinajpur Institute of Science & Technology
+                            </div>
+                            <span class="text-gray-600 font-mono text-xs">(2019 – 2023)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <strong class="text-gray-900">Higher Secondary Certificate (HSC) - Science</strong> | Kader Box Memorial College
+                            </div>
+                            <span class="text-gray-600 font-mono text-xs">(2017 – 2019)</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer (Hidden when printing) -->
+    <footer class="glass-nav border-t border-white/10 py-8 text-sm no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="text-gray-400">&copy; 2026 <strong class="text-white">Sakhawat Hossain</strong>. All rights reserved.</p>
+                <p class="text-xs text-gray-500">Backend Software Engineer | Laravel, PHP & AWS</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="assets/docs/Sakhawat_Hossain_Resume.pdf" download="SAKHAWAT_HOSSAIN_BACKEND_ENGINEER_CV.pdf" class="btn-primary text-xs py-1.5 px-3">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+                <a href="contact.html" class="btn-secondary text-xs py-1.5 px-3">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 p-3 rounded-full bg-indigo-600 text-white shadow-lg opacity-0 invisible hover:bg-indigo-700 transition-all z-40 no-print" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
