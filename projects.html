@@ -7,8 +7,8 @@
     
     <!-- SEO Meta Tags -->
     <meta name="title" content="Projects & Architecture Case Studies | Sakhawat Hossain">
-    <meta name="description" content="Explore production backend projects, modular architectures, AWS deployments, and real-time systems engineered by Sakhawat Hossain (MyBergo, CruzeHub, Organ Sciences, CodeStudio).">
-    <meta name="keywords" content="Laravel Projects, Backend Architecture, AWS Case Studies, MyBergo, CruzeHub, Organ Sciences, Next.js Fullstack, WebSockets, Sakhawat Hossain">
+    <meta name="description" content="Explore production backend projects, modular architectures, AWS deployments, and real-time systems engineered by Sakhawat Hossain (MyBergo, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences).">
+    <meta name="keywords" content="Laravel Projects, Backend Architecture, AWS Case Studies, MyBergo, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences, Next.js Fullstack, WebSockets, Sakhawat Hossain">
     <meta name="author" content="Sakhawat Hossain">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sajusun.github.io/portfolio/projects.html">
@@ -142,24 +142,72 @@
                                 <span class="tech-badge tech-badge-emerald">
                                     <i class="fas fa-circle text-emerald-400 text-[8px]"></i> Production Live
                                 </span>
-                                <span class="text-xs font-mono text-gray-400">Hotel & Property Management</span>
-                                <span class="text-xs font-mono text-indigo-400">Multi-Vendor SaaS</span>
+                                <span class="text-xs font-mono text-gray-400">Hotel Management & Booking SaaS</span>
+                                <span class="text-xs font-mono text-indigo-400">Multi-Portal Enterprise Architecture</span>
                             </div>
 
                             <div>
-                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">MyBergo — Multi-Vendor Hotel & Property Booking Engine</h2>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">MyBergo — Multi-Vendor Hotel & Property Booking Service Platform</h2>
                                 <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                    Architected a comprehensive Booking.com-style multi-tenant accommodation marketplace where property managers and hosts list hotels, resorts, and apartments, while guests browse and reserve accommodations with real-time date locking and seasonal dynamic pricing.
+                                    Architected an enterprise-scale Booking.com-style multi-tenant accommodation ecosystem operating across three dedicated portals: the guest-facing booking engine (<a href="https://mybergo.com" target="_blank" class="text-indigo-400 underline hover:text-indigo-300">mybergo.com</a>), the property host operations hub (<span class="text-gray-200 font-mono text-xs">hotel-owner.mybergo.com</span>), and the central governance dashboard (<span class="text-gray-200 font-mono text-xs">admin.mybergo.com</span>). Built for high availability, zero-downtime CI/CD, and sub-second booking transaction speed.
                                 </p>
                             </div>
 
                             <!-- Architecture & Problem Solving Breakdown -->
                             <div class="space-y-4 pt-2">
-                                <h3 class="text-sm font-mono uppercase tracking-wider text-indigo-400">Engineering Highlights & Solutions:</h3>
+                                <h3 class="text-sm font-mono uppercase tracking-wider text-indigo-400">Engineering Highlights & Enterprise AWS Architecture:</h3>
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-lock text-indigo-400"></i> Double-Booking Prevention
+                                            <i class="fas fa-server text-amber-400"></i> AWS EC2, ALB & Aurora RDS Cluster
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Architected high-availability cloud infrastructure utilizing AWS EC2 compute instances behind an Application Load Balancer (ALB) connected to an Amazon Aurora RDS (MySQL-compatible) relational cluster for automatic replication and failover.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-cloud-upload-alt text-cyan-400"></i> S3 Presigned Uploads & CDN Caching
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Engineered direct-to-S3 presigned URL uploads with time-limited authorization, automated 1-year immutable cache control headers (<code class="text-indigo-300 text-[11px]">max-age=31536000</code>), and secure expiring temporary view URLs.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-compress-arrows-alt text-emerald-400"></i> High-Throughput Image Compression
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Built an automated dynamic image processing service leveraging Intervention Image v4 with adaptive memory scaling (<code class="text-indigo-300 text-[11px]">512M</code>), resizing high-res property assets and encoding into lightweight WebP/JPEG formats.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-key text-rose-400"></i> GitHub Actions OIDC & AWS SSM CI/CD
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Constructed a zero-secret passwordless CI/CD pipeline using GitHub Actions OIDC to assume AWS IAM roles, deploying atomic releases securely to target live servers via AWS Systems Manager (SSM) Run Command.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-bolt text-yellow-400"></i> Real-Time Sockets (Laravel Reverb)
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Integrated Laravel Reverb WebSocket server for bi-directional real-time communication: instant booking status notifications, live in-app chat between guests and hotel managers, and live availability updates.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-envelope text-indigo-400"></i> Amazon SES & Transactional Delivery
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Configured Amazon SES (Simple Email Service) for transactional guest reservation receipts, PDF booking vouchers (Barryvdh DomPDF), host notifications, and DKIM/SPF verified deliverability.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-lock text-indigo-400"></i> Double-Booking Prevention & Concurrency
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
                                             Engineered pessimistic database row locking and Redis-backed temporary session holds to eliminate race conditions when multiple users attempt simultaneous booking on identical dates.
@@ -167,26 +215,10 @@
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-calculator text-emerald-400"></i> Automated Host Payouts
+                                            <i class="fas fa-credit-card text-emerald-400"></i> Multi-Gateway Payments & Payout Ledger
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
-                                            Developed a robust double-entry ledger calculation service for platform commissions, tax breakdowns, and automated monthly host payout distributions.
-                                        </p>
-                                    </div>
-                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
-                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-tachometer-alt text-cyan-400"></i> High-Speed Search & Filters
-                                        </div>
-                                        <p class="text-xs text-gray-400 leading-relaxed">
-                                            Designed optimized composite MySQL indexes and caching layers for location, price range, and amenity filtration, keeping API response latency under 60ms.
-                                        </p>
-                                    </div>
-                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
-                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-shield-alt text-amber-400"></i> Multi-Guard Authentication
-                                        </div>
-                                        <p class="text-xs text-gray-400 leading-relaxed">
-                                            Configured separate auth guards for Super Admin, Hotel Owners, Front-Desk Staff, and Guests with granular RBAC permissions.
+                                            Integrated Stripe Cashier and Chapa payment gateways with currency conversion APIs, automated refund sync command cron jobs, and double-entry commission payout ledgers for property hosts.
                                         </p>
                                     </div>
                                 </div>
@@ -194,33 +226,51 @@
 
                             <!-- Tech Badges -->
                             <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="tech-badge">Laravel 11</span>
-                                <span class="tech-badge">PHP 8.3</span>
-                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Laravel 12</span>
+                                <span class="tech-badge">PHP 8.4</span>
+                                <span class="tech-badge">Amazon Aurora RDS</span>
+                                <span class="tech-badge">AWS EC2 & ALB</span>
+                                <span class="tech-badge">AWS S3 Presigned URLs</span>
+                                <span class="tech-badge">AWS SSM OIDC CI/CD</span>
+                                <span class="tech-badge">Amazon SES</span>
+                                <span class="tech-badge">Laravel Reverb (WebSockets)</span>
+                                <span class="tech-badge">Intervention Image v4</span>
+                                <span class="tech-badge">Stripe Cashier</span>
                                 <span class="tech-badge">Redis Caching</span>
-                                <span class="tech-badge">AWS S3</span>
-                                <span class="tech-badge">RESTful API</span>
-                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">Spatie RBAC</span>
                             </div>
                         </div>
 
                         <!-- Sidebar / Live Actions -->
                         <div class="lg:col-span-4 glass-panel p-6 border border-white/10 space-y-6">
                             <div>
-                                <span class="text-xs font-mono uppercase text-gray-400">Platform URL</span>
-                                <div class="mt-1">
-                                    <a href="https://mybergo.com" target="_blank" rel="noopener" class="text-base font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-2">
-                                        <i class="fas fa-globe"></i> mybergo.com
-                                    </a>
+                                <span class="text-xs font-mono uppercase text-gray-400">Platform Ecosystem</span>
+                                <div class="mt-2 space-y-2">
+                                    <div>
+                                        <span class="text-[11px] text-gray-400 uppercase font-mono">Guest Booking Portal:</span>
+                                        <a href="https://mybergo.com" target="_blank" rel="noopener" class="text-sm font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+                                            <i class="fas fa-globe"></i> mybergo.com
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] text-gray-400 uppercase font-mono">Hotel Owner Portal:</span>
+                                        <div class="text-xs font-mono text-gray-300">hotel-owner.mybergo.com</div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] text-gray-400 uppercase font-mono">Super Admin Control:</span>
+                                        <div class="text-xs font-mono text-gray-300">admin.mybergo.com</div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div>
-                                <span class="text-xs font-mono uppercase text-gray-400">Key Metrics</span>
+                                <span class="text-xs font-mono uppercase text-gray-400">Infrastructure Highlights</span>
                                 <ul class="text-xs text-gray-300 mt-2 space-y-2">
-                                    <li><strong class="text-white">Real-Time</strong> Availability Calendar</li>
-                                    <li><strong class="text-white">Multi-Vendor</strong> Host Management</li>
-                                    <li><strong class="text-white">Dynamic</strong> Seasonal Pricing Rules</li>
+                                    <li><strong class="text-white">Cloud:</strong> AWS EC2 + ALB + Aurora RDS</li>
+                                    <li><strong class="text-white">CI/CD:</strong> GitHub Actions SSM OIDC (Passwordless)</li>
+                                    <li><strong class="text-white">Media:</strong> S3 Presigned Uploads + Intervention v4</li>
+                                    <li><strong class="text-white">Realtime:</strong> Laravel Reverb WebSocket Server</li>
+                                    <li><strong class="text-white">Email:</strong> Amazon SES with PDF Invoicing</li>
                                 </ul>
                             </div>
 
@@ -613,7 +663,109 @@
                     </div>
                 </div>
 
-                <!-- Project 6: Organ Sciences -->
+                <!-- Project 6: Caragon -->
+                <div id="caragon" class="project-card glass-panel p-6 sm:p-10 border border-white/10" data-category="laravel nextjs aws">
+                    <div class="grid lg:grid-cols-12 gap-8 items-start">
+                        
+                        <div class="lg:col-span-8 space-y-6">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <span class="tech-badge tech-badge-emerald">
+                                    <i class="fas fa-circle text-emerald-400 text-[8px]"></i> Production Live
+                                </span>
+                                <span class="text-xs font-mono text-gray-400">Headless Apparel E-Commerce</span>
+                                <span class="text-xs font-mono text-indigo-400">Next.js 15 & Laravel API</span>
+                            </div>
+
+                            <div>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Caragon — Modern Fashion & Apparel E-Commerce Platform</h2>
+                                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                                    Engineered the complete headless Laravel 11 RESTful API backend and integrated Next.js e-commerce storefront for Caragon (<a href="https://caragoan.vercel.app" target="_blank" class="text-indigo-400 underline hover:text-indigo-300">caragoan.vercel.app</a>). The platform handles dynamic product variants, seasonal drops, multi-location courier & dynamic tax matrices, automated Stripe checkout sessions, and a comprehensive admin management suite with live DataTables.
+                                </p>
+                            </div>
+
+                            <!-- Architecture & Problem Solving Breakdown -->
+                            <div class="space-y-4 pt-2">
+                                <h3 class="text-sm font-mono uppercase tracking-wider text-indigo-400">Engineering Highlights & Solutions:</h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-layer-group text-indigo-400"></i> Multi-Variant & Season Revival Engine
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Designed complex relational database schemas supporting multi-attribute variants (Size, Color, Seasonal Collections, Revival drops) with stock reservation locking and real-time inventory validation.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-map-marked-alt text-cyan-400"></i> Dynamic Regional Tax & Shipping Engine
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Engineered a multi-tier location fee controller calculating automated shipping rates, base fees, and regional tax brackets in real time based on country, state, city, and zip code.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-credit-card text-emerald-400"></i> Stripe Checkout & Webhook Pipeline
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Constructed resilient payment flows supporting direct single-item buy-now and multi-item cart checkouts via Stripe Checkout Sessions with cryptographically verified webhook handlers.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-desktop text-amber-400"></i> Headless CMS & Admin Control Suite
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Built a dynamic headless CMS for community stories, designer profiles, hero sliders, and legal disclosures, paired with a full-featured Laravel Breeze & Yajra DataTables admin portal.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tech Badges -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="tech-badge">Next.js 15</span>
+                                <span class="tech-badge">Laravel 11</span>
+                                <span class="tech-badge">PHP 8.2+</span>
+                                <span class="tech-badge">Stripe Checkout</span>
+                                <span class="tech-badge">Stripe Webhooks</span>
+                                <span class="tech-badge">JWT Authentication</span>
+                                <span class="tech-badge">MySQL Database</span>
+                                <span class="tech-badge">Yajra DataTables</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar / Live Actions -->
+                        <div class="lg:col-span-4 glass-panel p-6 border border-white/10 space-y-6">
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Live Web App</span>
+                                <div class="mt-1">
+                                    <a href="https://caragoan.vercel.app" target="_blank" rel="noopener" class="text-base font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-2">
+                                        <i class="fas fa-globe"></i> caragoan.vercel.app
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Core Architecture</span>
+                                <ul class="text-xs text-gray-300 mt-2 space-y-2">
+                                    <li><strong class="text-white">Frontend:</strong> Next.js App Router on Vercel</li>
+                                    <li><strong class="text-white">Backend:</strong> Laravel RESTful API & CMS</li>
+                                    <li><strong class="text-white">Payments:</strong> Stripe Session + Webhook Sync</li>
+                                    <li><strong class="text-white">Cart & Checkout:</strong> Multi-Attribute Variant Matrix</li>
+                                </ul>
+                            </div>
+
+                            <a href="https://caragoan.vercel.app" target="_blank" rel="noopener" class="btn-primary w-full text-center text-sm py-2.5">
+                                <i class="fas fa-external-link-alt"></i> Visit Live Store
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 7: Organ Sciences -->
                 <div id="organ-sciences" class="project-card glass-panel p-6 sm:p-10 border border-white/10" data-category="nextjs laravel">
                     <div class="grid lg:grid-cols-12 gap-8 items-start">
                         
