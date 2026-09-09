@@ -124,34 +124,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Contact Form Handling
+  // 7. Contact Form Handling (Live Google Apps Script & Google Sheets Integration)
   const contactForm = document.getElementById('contact-form');
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7cfKUkSEf8HONShmBRTvDyc7EgNgi_50QE072MzX9Xue99XpSi5F2UMkUtireaW3k/exec';
+
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending message...';
 
-      // Submit via Formspree or Email mailto fallback
       const formData = new FormData(contactForm);
-      const name = formData.get('name') || '';
-      const email = formData.get('email') || '';
-      const subject = formData.get('subject') || 'Portfolio Contact';
-      const message = formData.get('message') || '';
 
-      // Direct mailto trigger
-      const mailtoUrl = `mailto:backend.sakhawat@gmail.com?subject=${encodeURIComponent(subject + ' - from ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
-      
-      setTimeout(() => {
-        window.location.href = mailtoUrl;
-        window.showToast('Opening your email client to send message...', true);
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors' // Allows cross-origin Google Apps Script request without browser blocking
+        });
+
+        // Feedback to user
+        window.showToast('Thank you! Your message has been sent successfully.', true);
         contactForm.reset();
+      } catch (error) {
+        console.error('Submission error:', error);
+        window.showToast('Failed to send message. Please email me directly.', false);
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-      }, 600);
+      }
     });
   }
 });
