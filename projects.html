@@ -47,6 +47,28 @@
     
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- JSON-LD Structured Data / Breadcrumbs for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sajusun.github.io/portfolio/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects & Architecture Case Studies",
+          "item": "https://sajusun.github.io/portfolio/projects.html"
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="selection:bg-indigo-500 selection:text-white">
 
@@ -153,7 +175,7 @@
                             <div>
                                 <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">MyBergo — Multi-Vendor Hotel &amp; Property Booking Service Platform</h2>
                                 <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                    Architected an enterprise-scale Booking.com-style multi-tenant accommodation ecosystem operating across three dedicated portals: the guest-facing booking engine (<a href="https://mybergo.com" target="_blank" class="text-indigo-400 underline hover:text-indigo-300 font-semibold">mybergo.com</a>), a dedicated Property Host Operations Hub for hotel owners to manage rooms &amp; pricing, and a Central Governance Dashboard for super admins. Built for high availability, zero-downtime CI/CD, and sub-second booking transaction speed.
+                                    Architected an enterprise-scale Booking.com-style multi-tenant accommodation ecosystem operating across three dedicated portals: the guest-facing booking engine (<a href="https://mybergo.com" target="_blank" rel="noopener noreferrer" class="text-indigo-400 underline hover:text-indigo-300 font-semibold">mybergo.com</a>), a dedicated Property Host Operations Hub for hotel owners to manage rooms &amp; pricing, and a Central Governance Dashboard for super admins. Built for high availability, zero-downtime CI/CD, and sub-second booking transaction speed.
                                 </p>
                             </div>
 
@@ -306,7 +328,7 @@
                             <div>
                                 <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Auction Retriever — Real Estate &amp; Land Auction Aggregation &amp; Scraping Engine</h2>
                                 <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                    Architected the complete automated data extraction pipeline, GraphQL API engine, and subscription monetization backend for Auction Retriever (<a href="https://auctionretriever.com" target="_blank" class="text-amber-400 underline hover:text-amber-300 font-semibold">auctionretriever.com</a>). The platform crawls and aggregates thousands of foreclosed, tax deed, land, and bank-owned real estate auction listings from across the United States (Bid4Assets, RealtyBid, county boards), unifying them into a high-speed searchable investor dashboard with automated weekly digests.
+                                    Architected the complete automated data extraction pipeline, GraphQL API engine, and subscription monetization backend for Auction Retriever (<a href="https://auctionretriever.com" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline hover:text-amber-300 font-semibold">auctionretriever.com</a>). The platform crawls and aggregates thousands of foreclosed, tax deed, land, and bank-owned real estate auction listings from across the United States (Bid4Assets, RealtyBid, county boards), unifying them into a high-speed searchable investor dashboard with automated weekly digests.
                                 </p>
                             </div>
 
@@ -796,7 +818,7 @@
                             <div>
                                 <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Caragon — Modern Fashion & Apparel E-Commerce Platform</h2>
                                 <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                    Engineered the complete headless Laravel 11 RESTful API backend and integrated Next.js e-commerce storefront for Caragon (<a href="https://caragoan.vercel.app" target="_blank" class="text-indigo-400 underline hover:text-indigo-300">caragoan.vercel.app</a>). The platform handles dynamic product variants, seasonal drops, multi-location courier & dynamic tax matrices, automated Stripe checkout sessions, and a comprehensive admin management suite with live DataTables.
+                                    Engineered the complete headless Laravel 11 RESTful API backend and integrated Next.js e-commerce storefront for Caragon (<a href="https://caragoan.vercel.app" target="_blank" rel="noopener noreferrer" class="text-indigo-400 underline hover:text-indigo-300">caragoan.vercel.app</a>). The platform handles dynamic product variants, seasonal drops, multi-location courier & dynamic tax matrices, automated Stripe checkout sessions, and a comprehensive admin management suite with live DataTables.
                                 </p>
                             </div>
 
