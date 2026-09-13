@@ -23,20 +23,25 @@
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
     <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="profile">
     <meta property="og:url" content="https://sajusun.github.io/portfolio/">
     <meta property="og:title" content="Sakhawat Hossain | Backend Software Engineer (Laravel, PHP, AWS)">
     <meta property="og:description"
         content="Explore live enterprise production projects, modular backend architectures, AWS deployments, and ATS resume of Sakhawat Hossain.">
     <meta property="og:image"
-        content="https://raw.githubusercontent.com/sajusun/portfolio/main/assets/images/og-preview.png">
+        content="https://sajusun.github.io/portfolio/assets/images/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Sakhawat Hossain - Backend Software Engineer Portfolio">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sajusun.github.io/portfolio/">
-    <meta property="twitter:title" content="Sakhawat Hossain | Backend Software Engineer">
-    <meta property="twitter:description"
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sajusun.github.io/portfolio/">
+    <meta name="twitter:title" content="Sakhawat Hossain | Backend Software Engineer">
+    <meta name="twitter:description"
         content="Backend Software Engineer specializing in Laravel, PHP, AWS, and distributed web applications.">
+    <meta name="twitter:image"
+        content="https://sajusun.github.io/portfolio/assets/images/og-preview.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -65,48 +70,92 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- JSON-LD Structured Data for Google -->
+    <!-- JSON-LD Structured Data for Google & Knowledge Graph -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Sakhawat Hossain",
-      "alternateName": ["sajusun", "Saju Sun"],
-      "jobTitle": "Backend Software Engineer",
-      "url": "https://sajusun.github.io/portfolio/",
-      "sameAs": [
-        "https://github.com/sajusun",
-        "https://linkedin.com/in/sajusun"
-      ],
-      "knowsAbout": ["Laravel", "PHP", "AWS", "MySQL", "REST API", "WebSockets", "Redis", "Docker", "Next.js", "React"]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Sakhawat Hossain | Portfolio",
-      "alternateName": "sajusun | Saju Sun",
-      "url": "https://sajusun.github.io/portfolio/",
-      "author": {
-        "@type": "Person",
-        "name": "Sakhawat Hossain"
-      },
-      "hasPart": [
+      "@graph": [
         {
-          "@type": "WebPage",
-          "name": "Projects & Architecture Case Studies",
-          "url": "https://sajusun.github.io/portfolio/projects.html"
+          "@type": "Person",
+          "@id": "https://sajusun.github.io/portfolio/#person",
+          "name": "Sakhawat Hossain",
+          "alternateName": ["sajusun", "Saju Sun"],
+          "jobTitle": "Backend Software Engineer",
+          "description": "Backend Software Engineer specializing in PHP, Laravel, AWS Cloud Infrastructure, RESTful APIs, MySQL, and real-time WebSockets.",
+          "url": "https://sajusun.github.io/portfolio/",
+          "image": "https://sajusun.github.io/portfolio/assets/images/og-preview.png",
+          "sameAs": [
+            "https://github.com/sajusun",
+            "https://linkedin.com/in/sajusun"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Softvence IT Ltd"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Dinajpur Institute of Science & Technology"
+          },
+          "knowsAbout": [
+            "PHP",
+            "Laravel",
+            "Amazon Web Services",
+            "RESTful API Development",
+            "MySQL",
+            "PostgreSQL",
+            "WebSockets",
+            "Laravel Reverb",
+            "Redis",
+            "Docker",
+            "Microservices & Modular Architecture",
+            "Database Optimization"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dhaka",
+            "addressCountry": "Bangladesh"
+          }
         },
         {
-          "@type": "WebPage",
-          "name": "Resume / CV",
-          "url": "https://sajusun.github.io/portfolio/resume.html"
+          "@type": "WebSite",
+          "@id": "https://sajusun.github.io/portfolio/#website",
+          "url": "https://sajusun.github.io/portfolio/",
+          "name": "Sakhawat Hossain Portfolio",
+          "alternateName": ["sajusun Portfolio", "Saju Sun"],
+          "description": "Official engineering portfolio of Sakhawat Hossain, showcasing modular backend architectures, AWS deployments, and scalable production systems.",
+          "publisher": {
+            "@id": "https://sajusun.github.io/portfolio/#person"
+          },
+          "author": {
+            "@id": "https://sajusun.github.io/portfolio/#person"
+          },
+          "inLanguage": "en-US"
         },
         {
-          "@type": "WebPage",
-          "name": "Contact",
-          "url": "https://sajusun.github.io/portfolio/contact.html"
+          "@type": "ProfilePage",
+          "@id": "https://sajusun.github.io/portfolio/#profilepage",
+          "url": "https://sajusun.github.io/portfolio/",
+          "name": "Sakhawat Hossain | Backend Software Engineer",
+          "isPartOf": {
+            "@id": "https://sajusun.github.io/portfolio/#website"
+          },
+          "about": {
+            "@id": "https://sajusun.github.io/portfolio/#person"
+          },
+          "mainEntity": {
+            "@id": "https://sajusun.github.io/portfolio/#person"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://sajusun.github.io/portfolio/"
+              }
+            ]
+          }
         }
       ]
     }

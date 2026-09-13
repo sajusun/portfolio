@@ -23,6 +23,17 @@
     <meta property="og:url" content="https://sajusun.github.io/portfolio/projects.html">
     <meta property="og:title" content="Projects & Architecture Case Studies | Sakhawat Hossain">
     <meta property="og:description" content="Deep dive into production backend systems, database optimization metrics, and cloud infrastructure engineered for international clients.">
+    <meta property="og:image" content="https://sajusun.github.io/portfolio/assets/images/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Projects & Architecture Case Studies - Sakhawat Hossain">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sajusun.github.io/portfolio/projects.html">
+    <meta name="twitter:title" content="Projects & Architecture Case Studies | Sakhawat Hossain">
+    <meta name="twitter:description" content="Deep dive into production backend systems, database optimization metrics, and cloud infrastructure engineered for international clients.">
+    <meta name="twitter:image" content="https://sajusun.github.io/portfolio/assets/images/og-preview.png">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,6 +44,8 @@
                 extend: {
                     colors: {
                         brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
                             500: '#6366f1',
                             600: '#4f46e5',
                         }
@@ -48,23 +61,96 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- JSON-LD Structured Data / Breadcrumbs for Search Engines -->
+    <!-- JSON-LD Structured Data / Breadcrumbs & Project Collection for Search Engines -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@graph": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://sajusun.github.io/portfolio/"
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://sajusun.github.io/portfolio/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects & Architecture Case Studies",
+              "item": "https://sajusun.github.io/portfolio/projects.html"
+            }
+          ]
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Projects & Architecture Case Studies",
-          "item": "https://sajusun.github.io/portfolio/projects.html"
+          "@type": "CollectionPage",
+          "@id": "https://sajusun.github.io/portfolio/projects.html#collection",
+          "url": "https://sajusun.github.io/portfolio/projects.html",
+          "name": "Projects & Architecture Case Studies | Sakhawat Hossain",
+          "description": "Production backend systems, database optimization metrics, and cloud infrastructure engineered by Sakhawat Hossain.",
+          "isPartOf": {
+            "@id": "https://sajusun.github.io/portfolio/#website"
+          },
+          "author": {
+            "@type": "Person",
+            "@id": "https://sajusun.github.io/portfolio/#person",
+            "name": "Sakhawat Hossain"
+          },
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Featured Software Projects",
+            "itemListElement": [
+              {
+                "@type": "SoftwareApplication",
+                "position": 1,
+                "name": "MyBergo - Hotel & Property Booking Engine",
+                "operatingSystem": "Web, Cloud",
+                "applicationCategory": "BusinessApplication",
+                "url": "https://mybergo.com",
+                "author": {
+                  "@id": "https://sajusun.github.io/portfolio/#person"
+                },
+                "description": "Booking.com-style multi-vendor property management platform with date-locking algorithms, seasonal pricing, and host payout dashboards."
+              },
+              {
+                "@type": "SoftwareApplication",
+                "position": 2,
+                "name": "Auction Retriever - Property Scraping Engine",
+                "operatingSystem": "Web, Cloud",
+                "applicationCategory": "BusinessApplication",
+                "url": "https://auctionretriever.com",
+                "author": {
+                  "@id": "https://sajusun.github.io/portfolio/#person"
+                },
+                "description": "Automated multi-source property auction scraping pipeline with DomCrawler queue workers, GraphQL APIs, and Stripe Cashier subscriptions."
+              },
+              {
+                "@type": "SoftwareApplication",
+                "position": 3,
+                "name": "Organ Sciences - Supplement Subscription Platform",
+                "operatingSystem": "Web, Cloud",
+                "applicationCategory": "ECommerceApplication",
+                "url": "https://organ-sciences.vercel.app",
+                "author": {
+                  "@id": "https://sajusun.github.io/portfolio/#person"
+                },
+                "description": "D2C organic supplement subscription portal built with Next.js and Laravel, featuring recurring billing and Stripe webhook pipelines."
+              },
+              {
+                "@type": "SoftwareApplication",
+                "position": 4,
+                "name": "EHListings - City Directory & Events Engine",
+                "operatingSystem": "Web, Cloud",
+                "applicationCategory": "BusinessApplication",
+                "url": "https://ehlistings.com",
+                "author": {
+                  "@id": "https://sajusun.github.io/portfolio/#person"
+                },
+                "description": "Scalable local directory with Lighthouse GraphQL APIs, real-time WebSockets via Laravel Reverb, Twilio SMS verification, and FCM push notifications."
+              }
+            ]
+          }
         }
       ]
     }
